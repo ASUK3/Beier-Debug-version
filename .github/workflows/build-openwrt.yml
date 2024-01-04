@@ -68,14 +68,8 @@ jobs:
     - name: 更新订阅源
       run: cd openwrt && ./scripts/feeds update -a
 
-      - name: 更新订阅源2
-      run: cd openwrt && ./scripts/feeds update istore
-
     - name: 安装源
       run: cd openwrt && ./scripts/feeds install -a
-      
-      - name: 安装源2
-      run: cd openwrt && ./scripts/feeds install -d y -p istore luci-app-store
 
     - name: 加载自定义配置DIY2
       run: |
