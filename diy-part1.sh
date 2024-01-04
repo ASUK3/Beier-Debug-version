@@ -39,8 +39,6 @@ sed -i 's/pool.ntp.org/cn.pool.ntp.org/g'  package/base-files/files/bin/config_g
 sed -i 's,mirrors.vsean.net/openwrt,mirrors.pku.edu.cn/immortalwrt,g'  package/emortal/default-settings/files/99-default-settings-chinese
 
 #新增istore商店
-echo >> feeds.conf.default
+# echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
 
