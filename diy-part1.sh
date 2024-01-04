@@ -15,9 +15,10 @@
 # name: 替换默认主题 luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
-# Add a feed source
+# 添加提要源
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 
 # 修改时区 UTF-8
@@ -37,8 +38,3 @@ sed -i 's/pool.ntp.org/cn.pool.ntp.org/g'  package/base-files/files/bin/config_g
 
 # 替换源 
 sed -i 's,mirrors.vsean.net/openwrt,mirrors.pku.edu.cn/immortalwrt,g'  package/emortal/default-settings/files/99-default-settings-chinese
-
-#新增istore商店
-# echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-
