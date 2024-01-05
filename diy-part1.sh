@@ -18,9 +18,11 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # 添加提要源
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#istore软件源
 # echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 # echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 # echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+#定时任务软件源
 git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 
 # 修改时区 UTF-8
