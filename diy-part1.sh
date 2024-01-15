@@ -24,8 +24,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
 #定时任务软件源
 git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-#xkcp加速软件源
-echo "src-git xkcptun https://github.com/gigibox/openwrt-xkcptun.git" >> feeds.conf.default
 #mosdns软件源
 # git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 # remove v2ray-geodata package from feeds (openwrt-22.03 & master)
