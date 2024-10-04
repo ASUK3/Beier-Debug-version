@@ -38,13 +38,6 @@ sed -i 's/time.cloudflare.com/cn.ntp.org.cn/g'  package/base-files/files/bin/con
 sed -i 's/pool.ntp.org/cn.pool.ntp.org/g'  package/base-files/files/bin/config_generate
 
 # Tcp和内存调度优化
-echo 'vm.swappiness = 10' >>package/base-files/files/etc/sysctl.conf
-echo 'vm.dirty_ratio = 10' >>package/base-files/files/etc/sysctl.conf
-echo 'vm.dirty_background_ratio = 5' >>package/base-files/files/etc/sysctl.conf
-echo 'vm.overcommit_ratio = 50' >>package/base-files/files/etc/sysctl.conf
-echo 'vm.max_map_count = 262144' >>package/base-files/files/etc/sysctl.conf
-echo 'vm.min_free_kbytes = 65536' >>package/base-files/files/etc/sysctl.conf
-echo '' >>package/base-files/files/etc/sysctl.conf
 echo 'fs.file-max = 2097152' >>package/base-files/files/etc/sysctl.conf
 echo 'fs.nr_open = 2097152' >>package/base-files/files/etc/sysctl.conf
 echo '' >>package/base-files/files/etc/sysctl.conf
